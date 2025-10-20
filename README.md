@@ -6,6 +6,7 @@ It compares backend apis in:
 - Go
 - Python using flask
 - Kotlin using Ktor
+- Kotlin using Spring boot
 
 The front-end app uses next-js and looks something like this
 
