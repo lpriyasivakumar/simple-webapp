@@ -32,9 +32,9 @@ export default function Fetcher({url, text}: {url: string, text: string}) {
 
   return (
     <div>
-      <div style={{ paddingBottom: "16px" }} className="flex justify-left">
+      <div style={{ paddingBottom: "16px" }} className="flex justify-center">
       <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-left bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href=""
             target="_blank"
             rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function Fetcher({url, text}: {url: string, text: string}) {
             
       {data && (
         <div>
-          <img src={data?.message} alt="Random Dog" style={{ width: "400px", height: "400px", objectFit: "contain" }} />
+          <img src={data?.message} alt="Random Dog" style={{ width: "600px", height: "600px", objectFit: "contain" }} />
         </div>
       )}
     </div>

@@ -21,10 +21,14 @@ export default function Home() {
       // Load Python related resources or perform actions
       setUrl('http://localhost:8081/');
       setText('Fetch Python ');
-    } else if (lang === 'java') {
+    } else if (lang === 'kotlin') {
       // Load Java/Kotlin related resources or perform actions
       setUrl('http://localhost:8082/');
-      setText('Fetch Java/Kotlin ');
+      setText('Fetch Kotlin ');
+    } else if (lang === 'spring') {
+      // Load Java/Kotlin related resources or perform actions
+      setUrl('http://localhost:8083/');
+      setText('Fetch Kotlin Spring Boot ');
     }
   }, [lang]);
 
@@ -34,7 +38,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-extrabold text-center sm:text-left leading-tight">
          Simple Webapp with Next.js
         </h1>
-         <div className="flex gap-8 w-full items-center">
+         <div className="flex gap-8 w-full ">
         Languages:
         <label>
           <input type="radio" name="langGroup" value="option1" checked={lang === 'js'} onChange={() => setLang('js')} />
@@ -49,11 +53,15 @@ export default function Home() {
           Python
         </label>
          <label>
-          <input type="radio" name="langGroup" value="option4" checked={lang === 'java'} onChange={() => setLang('java')} />
-          Java/Kotlin
+          <input type="radio" name="langGroup" value="option4" checked={lang === 'kotlin'} onChange={() => setLang('kotlin')} />
+          Kotlin
+        </label>
+         <label>
+          <input type="radio" name="langGroup" value="option4" checked={lang === 'spring'} onChange={() => setLang('spring')} />
+          Kotlin Spring
         </label>
          </div>
-        <div className="flex gap-8 w-full items-center">
+        <div className="flex gap-8 w-full items-center justify-center flex-col">
          <Fetcher url={url} text={text} />              
         </div>
       </main>
